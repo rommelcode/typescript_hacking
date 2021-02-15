@@ -7,7 +7,7 @@ import './styles.css';
 function App(): JSX.Element {
   return (
     <div className="App">
-      <Person text={'hoer'} />
+      <Person />
     </div>
   );
 }

@@ -1,25 +1,29 @@
 import React from 'react';
 
 interface Props {
-  text: string;
+  message: string;
   ok?: boolean;
   i?: number;
   fn?: () => string;
 }
 
 const blaat: Props = {
-  text: 'fuck'
+  message: 'fuck'
 };
 
-class kut implements Props {
-  text: 'string';
-}
+// class kut implements Props {
+//   text: 'string';
+// }
 
 //const p = new blaat();
 
-const test: Props = { text: 'hoer' };
+//const test: Props = { text: 'hoer' };
 
-console.log(test.text);
+const test = new (class ya implements Props {
+  message = 'hahaha';
+})();
+
+console.log(test.message);
 
 const Person: React.FC = () => {
   return <div>{'bla'}</div>;
