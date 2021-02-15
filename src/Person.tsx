@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface Props {
+type Props = {
   message: string;
   ok?: boolean;
   i?: number;
   fn?: () => string;
-}
+};
 
 const blaat: Props = {
   message: 'fuck'
