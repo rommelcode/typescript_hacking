@@ -8,15 +8,19 @@ type Props = {
 };
 
 const blaat: Props = {
-  text: 'fuck offfdsfdsfs'
+  text: 'fuck'
 };
+
+class kut implements Props {
+  text: 'hoer';
+}
 
 //const p = new blaat();
 
-//console.log(blaat);
+console.log(new kut());
 
 const Person: React.FC = () => {
-  return <div>{blaat.text}</div>;
+  return <div>{'bla'}</div>;
 };
 
 export default Person;
