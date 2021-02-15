@@ -1,23 +1,23 @@
 import React from 'react';
 
-interface TestComponentProps {
-  name?: string;
+interface ITestComponent {
+  name: string;
 }
 
-function TestComponent(props: TestComponentProps) {
-  return <h1>{props.name || 'Unknown'} - Hello, world!</h1>;
+const TestComponent: React.FC<ITestComponent> = ({ name }) => {
+  return <div>Hello {name}!</div>;
+};
+
+interface ITestComponentNew {
+  age: number;
 }
 
-interface TestComponentNewProps extends TestComponentProps {
-  age?: number;
-}
-
-function TestComponentNew(props: TestComponentNewProps) {
+function TestComponentNew({ age }: ITestComponentNew) {
   return (
-    <div>
-      <TestComponent {...props} />
-      <h2>Age: {props.age}</h2>
-    </div>
+    <React.Fragment>
+      <TestComponent name={'Ted'} />
+      You are aged: {age}
+    </React.Fragment>
   );
 }
 
