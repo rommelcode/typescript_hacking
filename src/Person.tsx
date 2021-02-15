@@ -7,8 +7,8 @@ type Props = {
   fn?: () => string;
 };
 
-const blaat implements Props = {
-  text: 'fuck off'
+const blaat: Props = {
+  text: 'fuck offfdsfdsfs'
 };
 
 //const p = new blaat();
